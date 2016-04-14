@@ -4,11 +4,12 @@
   text-align: center;
   width: 200px;
   padding: 10px;
-  border: 1px solid #000000;
 
 }
 
 #clock {
   padding: 10px;
+  border: 2px solid #b3b3b3;
+  border-radius: 200px;
 
 }
