@@ -12,17 +12,13 @@ function displayTime() {
   var m = now.getMinutes();
   var s = now.getSeconds();
 
-  var timeString = formatHour(h) + ":" + padZero(m) + ":" + padZero(s) + " " + getTimePeriod(h);
-
-  document.getElementById('current-time').innerHTML = timeString;
-
   // --- Analog clock ---//
   var canvas = document.querySelector("#clock");
   var context = canvas.getContext("2d");
 
   // You can change this to make the clock as big or small as you want.
   // Just remember to adjust the canvas size if necessary.
-  var clockRadius = 50;
+  var clockRadius = canvas.width / 2;
 
   // Make sure the clock is centered in the canvas
   var clockX = canvas.width / 2;
@@ -48,12 +44,12 @@ function displayTime() {
 
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  drawArm(h/12, 2, 0.50, '#b3b3b3');
-  drawArm(m/60, 2, 0.75, '#b3b3b3');
+  drawArm(h/12, 2, 0.65, '#b3b3b3');
+  drawArm(m/60, 2, 0.85, '#b3b3b3');
 
   // Create a circle at the center of the clock
   context.beginPath();
-  context.arc(clockX, clockY, 3, 0, Math.PI*2);
+  context.arc(clockX, clockY, 2, 0, Math.PI*2);
   context.fillStyle = '#b3b3b3';
   context.fill();
 
