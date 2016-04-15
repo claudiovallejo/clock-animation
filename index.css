@@ -35,6 +35,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  /* Fade-in Animation */
+  -webkit-animation: fade-in 2s ease-in-out; /* Safari 4+ */
+  -moz-animation:    fade-in 2s ease-in-out; /* Fx 5+ */
+  -o-animation:      fade-in 2s ease-in-out; /* Opera 12+ */
+  animation:         fade-in 2s ease-in-out; /* IE 10+, Fx 29+ */
 
 }
 
@@ -43,5 +48,30 @@
   background-color: white;
   border-radius: 200px;
   z-index: 10;
+
+}
+
+/* Fade-in Keyframe Animation */
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+
+}
+
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+
+}
+
+@-o-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 
 }
