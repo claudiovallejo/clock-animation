@@ -54,31 +54,3 @@ function displayTime() {
   context.fill();
 
 }
-
-function padZero(num) {
-  if (num < 10) {
-    return "0" + String(num);
-
-  } else {
-    return String(num);
-
-  }
-
-}
-
-function formatHour(h) {
-  var hour = h % 12;
-
-  if (hour == 0) {
-    hour = 12;
-
-  }
-
-  return String(hour)
-
-}
-
-function getTimePeriod(h) {
-  return (h < 12) ? "AM" : "PM";
-
-}
